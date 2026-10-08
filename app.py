@@ -87,7 +87,7 @@ def main() -> None:
     cols = st.columns(3)
     for i, r in enumerate(results):
         with cols[i % 3]:
-            st.image(str(DATA_DIR / r["path"]), use_container_width=True)
+            st.image(str(DATA_DIR / r["path"]), width="stretch")
             st.caption(f"{r['label']} — score {r['score']:.3f}")
 
 
